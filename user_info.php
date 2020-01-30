@@ -28,4 +28,6 @@ UID：<?php echo $info['uid']; ?><br/>
 <input type="radio" name="rule" value="all" /> 全部顺次显示<br>
 <input type="submit" value = "提交">
 </form>
+<font color = "blue"><h1>黑名单列表</h1></font>
+<a href = 'my_blacklist.php'>点击查看</a>
 <h1><a href = "logout.php"><font color = "blue">登出</font></a></h1>
