@@ -1,5 +1,4 @@
 <?php
-
 function is_login(){
 	require "mysql.php";
 	$db = new mysqli($db_address, $db_username, $db_pw, $db_name);
@@ -9,8 +8,10 @@ function is_login(){
 		$cmd = "SELECT * FROM user WHERE user_token = '".$_COOKIE['user_token']."';";
 		$user = $db->query($cmd);
 		$info = $user->fetch_assoc();
-		if(empty($info['username'])) return false;
-			else return true;
+		if(empty($info['username'])){
+			setcookie("user_token", "null", time()-1);
+			return false;
+		}else return true;
 	}
 }
 function set_login($un, $pw){
