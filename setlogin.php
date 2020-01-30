@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
 <?php
 require "includes/functions.php";
-setlogin($_POST['username'], md5($_POST['pw']));
+set_login($_POST['username'], md5($_POST['pw']));
 ?>
