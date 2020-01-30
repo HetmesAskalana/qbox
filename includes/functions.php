@@ -52,7 +52,7 @@ function new_ques($name, $message){
 	$info = $user->fetch_assoc();
 	if(empty($info)) die("用户不存在");
 	$uid = $info['uid'];
-	$cmd = "INSERT INTO questions (uid, msg) VALUES (".$info['uid'].", '".$message."');";
+	$cmd = "INSERT INTO questions (uid, msg, submit_ip) VALUES (".$info['uid'].", '".$message."', '".$_SERVER_[REMOTE_ADDR]."');";
 	$db->query($cmd);
 	echo "<script>alert('成功！即将返回到主界面');parent:location.href='index.php';</script>";
 }
