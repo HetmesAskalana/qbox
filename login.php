@@ -6,7 +6,7 @@ if(is_login()){
 	die();
 }
 ?>
-<form method = "post" action = "setlogin.php">
+<form method = "post" action = "set_login.php">
 <center>用户名<input type = "text" name = "username"></center>
 <center>密码<input type = "password" name = "pw"></center>
 <center><input type = "submit" value = "登录"></center>
