@@ -12,7 +12,6 @@ if(!is_login()){
 if($userinfo['show_rule'] == 0){
 	echo "<center>问题将被展示在下面，点击已读将会展示下一个问题。<br/></center><center><h2><font color = 'gray'>";
 	show_ques($_COOKIE['user_token']);
-	echo "</font></h2></center><br/><center><a href = 'show.php' >点击刷新</a></center>";
 }else if($userinfo['show_rule'] == 1){
 	echo "<center>正在展示全部问题，已读的将不会展示。<br/></center>";
 	show_ques($_COOKIE['user_token']);
