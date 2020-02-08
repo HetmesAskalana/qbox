@@ -19,8 +19,8 @@ $cnt = $n->fetch_assoc();
 UID：<?php echo $info['uid']; ?><br/>
 用户名：<?php echo $info['username']; ?><br/>
 <!--问题总数：<?php echo $cnt['COUNT(*)']; ?><br/>-->
-您的提问箱链接：<a href = "https://qbox.unacas.org/new_ques.php?target_un=<?php echo $info['username']; ?>">https://qbox.unacas.org/new_ques.php?target_un=<?php echo $info['username']; ?></a><br/>
-前往查看问题：<a href = "https://qbox.unacas.org/show.php">点此</a><br/>
+您的提问箱链接：<a href = "<?php echo $_SERVER['HTTP_HOST']; ?>/new_ques.php?target_un=<?php echo $info['username']; ?>"><?php echo $_SERVER['HTTP_HOST']; ?>/new_ques.php?target_un=<?php echo $info['username']; ?></a><br/>
+前往查看问题：<a href = "<?php echo $_SERVER['HTTP_HOST']; ?>/show.php">点此</a><br/>
 <font color = "blue"><h1>设置</h1></font>
 <form method = "post" action = "set_show_rule.php">
 <h2>问题显示模式</h2>
