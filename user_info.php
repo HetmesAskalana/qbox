@@ -18,7 +18,7 @@ $cnt = $n->fetch_assoc();
 <font color = "blue"><h1>基本信息</h1></font>
 UID：<?php echo $info['uid']; ?><br/>
 用户名：<?php echo $info['username']; ?><br/>
-<!--问题总数：<?pho echo $cnt['COUNT(*)']; ?><br/>-->
+<!--问题总数：<?php echo $cnt['COUNT(*)']; ?><br/>-->
 您的提问箱链接：<a href = "https://qbox.unacas.org/new_ques.php?target_un=<?php echo $info['username']; ?>">https://qbox.unacas.org/new_ques.php?target_un=<?php echo $info['username']; ?></a><br/>
 前往查看问题：<a href = "https://qbox.unacas.org/show.php">点此</a><br/>
 <font color = "blue"><h1>设置</h1></font>
