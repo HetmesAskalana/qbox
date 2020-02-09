@@ -41,7 +41,7 @@ function set_register($un, $pw){
 	$info = $user->fetch_assoc();
 	if(!empty($info)) die("用户名已被占用");
 	$tok = md5(mt_rand(1, 1000).$username.$pw.time());
-	$cmd = "INSERT INTO user (username, pw, user_token) VALUES ('".$un."', ".md5($pw).", ".$tok.");";
+	$cmd = "INSERT INTO user (`uid`,`username`, `pw`, `user_token`,`last_ip`) VALUES ('','".$un."', ".md5($pw).", ".$tok.",'');";
 	$db->query($cmd);
 	echo "<script>alert('注册完成，前往登录');parent:location.href='login.php';</script>";
 }
