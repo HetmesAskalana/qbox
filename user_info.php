@@ -9,16 +9,14 @@ $db = new mysqli($db_address, $db_username, $db_pw, $db_name);
 $cmd = "SELECT * FROM user WHERE user_token = '".$_COOKIE['user_token']."';";
 $user = $db->query($cmd);
 $info = $user->fetch_assoc();
-/*
-$cmd = "SELECT COUNT(*) FROM questions WHERE uid = ".$info['uid'].";";
+$cmd = "SELECT COUNT(*) as count FROM questions WHERE uid = ".$info['uid'].";";
 $n = $db->query($cmd);
 $cnt = $n->fetch_assoc();
-*/
 ?>
 <font color = "blue"><h1>基本信息</h1></font>
 UID：<?php echo $info['uid']; ?><br/>
 用户名：<?php echo $info['username']; ?><br/>
-<!--问题总数：<?pho echo $cnt['COUNT(*)']; ?><br/>-->
+问题总数：<?php echo $cnt['count']; ?><br/>
 您的提问箱链接：<a href = "https://qbox.unacas.org/new_ques.php?target_un=<?php echo $info['username']; ?>">https://qbox.unacas.org/new_ques.php?target_un=<?php echo $info['username']; ?></a><br/>
 前往查看问题：<a href = "https://qbox.unacas.org/show.php">点此</a><br/>
 <font color = "blue"><h1>设置</h1></font>
